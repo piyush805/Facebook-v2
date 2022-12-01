@@ -64,7 +64,7 @@ function InputBox() {
     }
     return (
         <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6">
-            <div className="flex space-x-4 p-2 items-center ">
+            <div className="flex space-x-2 p-2 items-center ">
                 <Image
                     className="rounded-full"
                     src={session.user.image}
@@ -72,7 +72,7 @@ function InputBox() {
                     height={40}
                     alt={session.user.image}
                 />
-                <form className="flex flex-1">
+                <form className="flex flex-1 object-contain">
                     <input
                         className="rounded-full h-12 bg-gray-100 flex-grow px-5 focus:outline-none"
                         ref={inputRef}
@@ -90,17 +90,17 @@ function InputBox() {
             </div>
             <div className="flex justify-evenly pt-1 border-t">
                 <div className="inputIcon">
-                    <VideoCameraIcon className="h-7 text-red-500" />
-                    <p className="text-xs sm:text-sm xl:text-base" >Live Video </p>
+                    <VideoCameraIcon className="h-5 sm:h-7 text-red-500" />
+                    <p className="hidden sm:inline-flex text-xs sm:text-sm xl:text-base" >Live Video </p>
                 </div>
                 <div onClick={() => filepickerRef.current.click()} className="inputIcon">
-                    <CameraIcon className="h-7 text-green-400" />
-                    <p className="text-xs sm:text-sm xl:text-base" >Photo/Video </p>
+                    <CameraIcon className="h-5 sm:h-7 text-green-400" />
+                    <p className="hidden sm:inline-flex text-xs sm:text-sm xl:text-base" >Photo/Video </p>
                     <input ref={filepickerRef} onChange={addImageToPost} type="file" hidden />
                 </div>
                 <div className="inputIcon">
-                    <EmojiHappyIcon className="h-7 text-yellow-300" />
-                    <p className="text-xs sm:text-sm xl:text-base" >Feeling/Activity </p>
+                    <EmojiHappyIcon className="h-5 sm:h-7 text-yellow-300" />
+                    <p className="hidden sm:inline-flex text-xs sm:text-sm xl:text-base" >Feeling/Activity </p>
                 </div>
             </div>
 
